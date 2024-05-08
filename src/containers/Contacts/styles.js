@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Image = styled.img`
   height: 206px;
@@ -25,10 +25,15 @@ export const Card = styled.div`
     border: none;
     cursor: pointer;
     background-color: transparent;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.17);
+    }
   }
 `;
 
-export const Order = styled.li`
+export const Contact = styled.li`
   outline: none;
   border: none;
   width: 170px;
@@ -39,7 +44,7 @@ export const Order = styled.li`
     font-weight: 400;
     color: #ffffff;
     margin-bottom: 3px;
-    opacity: .85;
+    opacity: 0.85;
   }
 
   h5 {

@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./containers/Home";
-import Orders from "./containers/Orders";
+import Contacts from "./containers/Contacts";
 
 function Navigation() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/orders" element={<Orders/>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/contacts" element={<Contacts />} />
       </Routes>
     </Router>
   );
