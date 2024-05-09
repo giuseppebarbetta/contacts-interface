@@ -11,22 +11,22 @@ import ContainerItems from "../../components/ContainerItems";
 import { Image, InputLabel, Input } from "./styles";
 
 function App() {
-  const [orders, setOrders] = useState([]);
+  const [contacts, setContacts] = useState([]);
   const navigate = useNavigate();
-  const inputOrder = useRef();
+  const inputPhone = useRef();
   const inputName = useRef();
 
   async function addNewContact() {
-    if (inputName.current.value === "" && inputOrder.current.value === "") {
+    if (inputName.current.value === "" && inputPhone.current.value === "") {
       alert("Informe um telefone e um nome para concluir");
     } else if (
       inputName.current.value !== "" &&
-      inputOrder.current.value === ""
+      inputPhone.current.value === ""
     ) {
       alert("Informe um telefone para continuar");
     } else if (
       inputName.current.value === "" &&
-      inputOrder.current.value !== ""
+      inputPhone.current.value !== ""
     ) {
       alert("Informe um Nome para concluir");
     } else {
@@ -34,12 +34,12 @@ function App() {
         "http://localhost:3001/contacts",
         {
           contactName: inputName.current.value,
-          phone: inputOrder.current.value,
+          phone: inputPhone.current.value,
         }
       );
 
       console.log(newContact);
-      setOrders([...orders, newContact]);
+      setContacts([...contacts, newContact]);
       navigate("/contacts");
     }
   }
@@ -55,15 +55,14 @@ function App() {
         <Titles> Adicione um contato </Titles>
 
         <InputLabel>Telefone:</InputLabel>
-        <Input ref={inputOrder} placeholder="011 123450 6789" />
+        <Input ref={inputPhone} type="number" placeholder="011 123450 6789" />
 
         <InputLabel>Nome:</InputLabel>
-        <Input ref={inputName} placeholder="Maria Joaquina" />
+        <Input ref={inputName} type="text" placeholder="Maria Joaquina" />
 
         <Button onClick={addNewContact}> Novo Contato </Button>
         <Button goto={true} onClick={goToPage}>
-          {" "}
-          Todos Contatos{" "}
+          Todos Contatos
         </Button>
       </ContainerItems>
     </Container>

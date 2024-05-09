@@ -44,13 +44,13 @@ function Contacts() {
         <Titles>Contatos:</Titles>
 
         <ul>
-          {contacts.map((constact) => (
-            <Card key={constact.id}>
+          {contacts.map((contact) => (
+            <Card key={contact.id}>
               <Contact>
-                <p>{constact.phone}</p>
-                <h5>{constact.contactName}</h5>
+                <p>{contact.phone}</p>
+                <h5>{contact.contactName}</h5>
               </Contact>
-              <button onClick={() => deleteOrder(constact.id)}>
+              <button onClick={() => deleteOrder(contact.id)}>
                 <img alt="trash-logo" src={TrashIcon} />
               </button>
             </Card>
