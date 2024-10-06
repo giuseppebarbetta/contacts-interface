@@ -17,8 +17,8 @@
   <h2>Previa:</h2>
 
   <div display: flex>
-  <img src='https://github.com/giuseppebarbetta/contacts-interface/assets/148505073/3216762c-f43b-4182-9137-055e4a34aa84' alt='preview create new contact' width='450px' />
-  <img src='https://github.com/giuseppebarbetta/contacts-interface/assets/148505073/e5150a15-1323-4efb-aac6-f3cf667b3a1a' alt='preview contacts app interface' width='450px' />
+  <img src='https://github.com/giuseppebarbetta/contacts-interface/assets/148505073/3216762c-f43b-4182-9137-055e4a34aa84' alt='preview create new contact' width='350px' />
+  <img src='https://github.com/giuseppebarbetta/contacts-interface/assets/148505073/e5150a15-1323-4efb-aac6-f3cf667b3a1a' alt='preview contacts app interface' width='350px' />
 
   </div>
 
